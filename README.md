@@ -1,31 +1,52 @@
-# SBMG Textiles Website
+# SBMG Digital Platform V2
 
-A professional bilingual static website for GitHub Pages.
+A Next.js + Supabase wholesale kidswear website with:
 
-## Upload to GitHub Pages
-1. Open your GitHub website repository.
-2. Delete the old website files after downloading a backup.
-3. Upload `index.html`, `styles.css`, `script.js`, and `products.js` to the repository root.
-4. Commit the changes.
-5. In GitHub: Settings → Pages → Deploy from branch → `main` / root.
-6. Keep your current custom domain settings for `sbmgtextiles.com`.
+- Premium public homepage
+- Dynamic product catalogue
+- Product detail pages
+- PDF catalogue downloads
+- Admin dashboard
+- Product image uploads
+- PDF catalogue uploads
+- Dealer enquiry database
+- Supabase authentication and storage
 
-## Add catalogue products later
-Open `products.js`. Duplicate one product object, then change:
-- English and Hindi product name
-- Subtitle and description
-- Category
-- Two colours
-- Badge
-- Garment illustration type
+## 1. Create Supabase project
 
-For real product photos, replace the generated SVG inside each card with an image field. A developer can do this without changing the layout.
+1. Create a project at Supabase.
+2. Open **SQL Editor**.
+3. Run `supabase/schema.sql`.
+4. Open **Authentication → Users** and create the first admin user.
+5. Copy Project URL, anon key and service-role key.
 
-## Important before publishing
-- Confirm all company claims shown are accurate.
-- The phone, email and address were taken from the existing live website.
-- Replace catalogue illustrations with your real product photographs when ready.
-- Compress photos to WebP format, ideally below 250 KB each.
+## 2. Configure the project
 
-## Premium Heritage Update
-This package includes the premium navy-and-gold visual upgrade, refined navigation, stronger hero presentation, upgraded product cards, and improved mobile styling.
+Copy `.env.example` to `.env.local` and enter your keys.
+
+Important: never expose `SUPABASE_SERVICE_ROLE_KEY` publicly or commit `.env.local`.
+
+## 3. Run locally
+
+```bash
+npm install
+npm run dev
+```
+
+Open `http://localhost:3000`.
+Admin login: `http://localhost:3000/admin/login`.
+
+## 4. Deploy
+
+Recommended: import the GitHub repository into Vercel and add the same environment variables in Vercel Project Settings.
+
+## 5. Before launch
+
+- Replace the sample WhatsApp number `919000000000` in `components/Header.tsx`, `app/page.tsx`, and `app/products/[slug]/page.tsx`.
+- Add your real address, email and brand logo.
+- Add admin route protection using Next.js middleware before public launch.
+- Connect your custom domain in Vercel.
+
+## Important
+
+GitHub Pages cannot run this application because it needs server-side features. Deploy it through Vercel, Netlify with Next.js support, or another Node.js host.
