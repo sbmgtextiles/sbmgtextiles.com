@@ -26,3 +26,6 @@ For real product photos, replace the generated SVG inside each card with an imag
 - The phone, email and address were taken from the existing live website.
 - Replace catalogue illustrations with your real product photographs when ready.
 - Compress photos to WebP format, ideally below 250 KB each.
+
+## Premium Heritage Update
+This package includes the premium navy-and-gold visual upgrade, refined navigation, stronger hero presentation, upgraded product cards, and improved mobile styling.
