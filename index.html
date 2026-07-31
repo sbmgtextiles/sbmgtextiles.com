@@ -28,7 +28,6 @@
       <nav class="menu">
         <a href="#collections">Collections</a>
         <a href="#products">Products</a>
-        <a href="#catalogues">Catalogues</a>
         <a href="#about">About</a>
         <a class="nav-cta" href="#contact">Wholesale Enquiry</a>
       </nav>
@@ -44,7 +43,7 @@
           <p class="lead">Reliable manufacturing, commercial colours and reorder-friendly styles for distributors and retailers across India.</p>
           <div class="hero-actions">
             <a class="btn primary" href="#products">View Products</a>
-            <a class="btn secondary" href="#catalogues">Download Catalogues</a>
+            <a class="btn secondary" href="#products">Explore Collection</a>
           </div>
           <div class="trust-grid">
             <div><strong>3–14 yrs</strong><span>Age coverage</span></div>
@@ -89,15 +88,6 @@
       </div>
     </section>
 
-    <section id="catalogues" class="section dark">
-      <div class="container">
-        <div class="section-head light-head">
-          <div><p class="eyebrow gold">CATALOGUES</p><h2>Download our latest ranges</h2></div>
-          <p>Add, edit and remove catalogues using the included manager page.</p>
-        </div>
-        <div id="catalogueGrid" class="catalogue-grid"></div>
-      </div>
-    </section>
 
     <section id="about" class="section">
       <div class="container about-grid">
@@ -127,10 +117,31 @@
     </section>
   </main>
 
+  <div id="productModal" class="product-modal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-dialog">
+      <button class="modal-close" data-close-modal>×</button>
+      <div class="modal-gallery">
+        <div class="main-image-wrap"><img id="modalMainImage" src="" alt=""><button id="zoomButton" class="zoom-button">Zoom photo</button></div>
+        <div id="modalThumbnails" class="modal-thumbnails"></div>
+      </div>
+      <div class="modal-info">
+        <span id="modalBadge" class="tag"></span><h2 id="modalName"></h2><p id="modalDescription" class="modal-description"></p>
+        <div class="detail-list">
+          <div><span>Age</span><strong id="modalAge"></strong></div><div><span>Sizes</span><strong id="modalSizes"></strong></div>
+          <div><span>Fabric</span><strong id="modalFabric"></strong></div><div><span>GSM</span><strong id="modalGsm"></strong></div>
+          <div><span>Collection</span><strong id="modalCollection"></strong></div>
+        </div>
+        <p id="modalDetails" class="modal-extra"></p><a id="modalWhatsapp" class="btn primary" href="#" target="_blank">Enquire on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+  <div id="zoomViewer" class="zoom-viewer" aria-hidden="true"><button id="zoomClose" class="zoom-close">×</button><div class="zoom-stage"><img id="zoomImage" src="" alt=""></div><p>Scroll or pinch to zoom · Drag to inspect</p></div>
+
   <footer>
     <div class="container footer-grid">
       <div class="brand footer-brand"><img src="images/logo/sbmg-logo.svg" alt=""><span><strong>SBMG</strong><small>TEXTILES</small></span></div>
-      <div><b>Quick links</b><a href="#products">Products</a><a href="#catalogues">Catalogues</a><a href="admin.html">Manager</a></div>
+      <div><b>Quick links</b><a href="#products">Products</a><a href="admin.html">Product Manager</a></div>
       <div><b>Contact</b><p id="footerPhone"></p><p id="footerEmail"></p><p id="footerAddress"></p></div>
     </div>
     <div class="container copyright">© <span id="year"></span> SBMG Textiles. All rights reserved.</div>
@@ -140,7 +151,6 @@
 
   <script src="data/settings.js"></script>
   <script src="data/products.js"></script>
-  <script src="data/catalogues.js"></script>
   <script src="js/site.js"></script>
 </body>
 </html>

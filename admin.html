@@ -12,28 +12,21 @@
 <body>
   <aside class="sidebar">
     <a class="admin-brand" href="index.html"><img src="images/logo/sbmg-logo.svg"><span>SBMG Manager</span></a>
-    <button class="tab active" data-tab="catalogues">Catalogues</button>
-    <button class="tab" data-tab="products">Products</button>
+    <button class="tab active" data-tab="products">Products</button>
     <button class="tab" data-tab="settings">Contact Settings</button>
     <a class="back-link" href="index.html">← View Website</a>
   </aside>
 
   <main class="admin-main">
     <header class="admin-header">
-      <div><p>STATIC WEBSITE MANAGER</p><h1>Easy catalogue and product editor</h1></div>
+      <div><p>STATIC WEBSITE MANAGER</p><h1>Easy product and photo editor</h1></div>
       <div class="status">Works without coding</div>
     </header>
 
-    <section id="catalogues" class="panel active">
-      <div class="panel-head"><div><h2>Catalogue Manager</h2><p>Add details, then export the updated file.</p></div><button id="addCatalogue" class="btn primary">+ Add Catalogue</button></div>
-      <div class="notice"><b>Important:</b> Upload the PDF and cover image to GitHub first. Then use the same file paths here.</div>
-      <div id="catalogueEditor" class="editor-list"></div>
-      <div class="export-bar"><button id="exportCatalogues" class="btn success">Download updated catalogues.js</button><span>Upload the downloaded file into GitHub → <b>data/catalogues.js</b></span></div>
-    </section>
 
-    <section id="products" class="panel">
-      <div class="panel-head"><div><h2>Product Manager</h2><p>Add or edit products and export the data file.</p></div><button id="addProduct" class="btn primary">+ Add Product</button></div>
-      <div class="notice"><b>Image path example:</b> images/products/space-set.svg</div>
+    <section id="products" class="panel active">
+      <div class="panel-head"><div><h2>Product Manager</h2><p>Add products with up to 3 photos, edit details, then export the data file.</p></div><button id="addProduct" class="btn primary">+ Add Product</button></div>
+      <div class="notice"><b>Upload 2–3 photos into images/products first.</b> Then enter all three image paths below.</div>
       <div id="productEditor" class="editor-list"></div>
       <div class="export-bar"><button id="exportProducts" class="btn success">Download updated products.js</button><span>Upload the downloaded file into GitHub → <b>data/products.js</b></span></div>
     </section>
@@ -58,7 +51,6 @@
 
   <script src="data/settings.js"></script>
   <script src="data/products.js"></script>
-  <script src="data/catalogues.js"></script>
   <script src="js/admin.js"></script>
 </body>
 </html>
