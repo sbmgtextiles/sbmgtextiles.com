@@ -9,7 +9,7 @@ window.SBMG_PRODUCTS = [
     "fabric": "Single Jersey",
     "gsm": "190 GSM",
     "badge": "Popular",
-    "image": "images/products/space-set.svg",
+    "image": "images/products/05877964-136d-4ee1-b289-e36b9d4e29e6.png",
     "description": "Commercial space-themed T-shirt and shorts set."
   },
   {
