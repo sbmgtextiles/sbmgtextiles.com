@@ -1,1 +1,0 @@
-Store your final SBMG logo files here.

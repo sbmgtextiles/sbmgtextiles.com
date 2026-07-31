@@ -1,1 +1,0 @@
-Upload product photos here. Recommended: JPG or WebP, square or 4:5 ratio.

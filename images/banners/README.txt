@@ -1,1 +1,0 @@
-Upload homepage and section banner images here.
