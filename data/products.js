@@ -1,0 +1,80 @@
+window.SBMG_PRODUCTS = [
+  {
+    "id": "space-boys-set",
+    "name": "Space Boys Co-ord Set",
+    "category": "Boys",
+    "collection": "Summer",
+    "age": "3–7 Years",
+    "sizes": "3, 4, 5, 6, 7",
+    "fabric": "Single Jersey",
+    "gsm": "190 GSM",
+    "badge": "Popular",
+    "image": "images/products/space-set.svg",
+    "description": "Commercial space-themed T-shirt and shorts set."
+  },
+  {
+    "id": "safari-set",
+    "name": "Safari Adventure Set",
+    "category": "Boys",
+    "collection": "Summer",
+    "age": "3–7 Years",
+    "sizes": "3, 4, 5, 6, 7",
+    "fabric": "Single Jersey",
+    "gsm": "190 GSM",
+    "badge": "New",
+    "image": "images/products/safari-set.svg",
+    "description": "Kids-friendly safari graphic with wholesale-focused colours."
+  },
+  {
+    "id": "girls-play-set",
+    "name": "Girls Play Set",
+    "category": "Girls",
+    "collection": "Summer",
+    "age": "5–8 Years",
+    "sizes": "5, 6, 7, 8",
+    "fabric": "Cotton Lycra",
+    "gsm": "180 GSM",
+    "badge": "New",
+    "image": "images/products/girls-set.svg",
+    "description": "Soft everyday set designed for comfort and quick retail movement."
+  },
+  {
+    "id": "winter-loop-set",
+    "name": "Winter Loop-Knit Set",
+    "category": "Winter",
+    "collection": "Winter",
+    "age": "3–7 Years",
+    "sizes": "3, 4, 5, 6, 7",
+    "fabric": "Loop Knit",
+    "gsm": "240 GSM",
+    "badge": "Seasonal",
+    "image": "images/products/winter-set.svg",
+    "description": "Warm full-sleeve set for winter wholesale orders."
+  },
+  {
+    "id": "football-tee",
+    "name": "Football Graphic T-shirt",
+    "category": "Boys",
+    "collection": "Festive",
+    "age": "5–8 Years",
+    "sizes": "5, 6, 7, 8",
+    "fabric": "Single Jersey",
+    "gsm": "180 GSM",
+    "badge": "Fast Seller",
+    "image": "images/products/football-tee.svg",
+    "description": "Medium chest print with market-friendly placement."
+  },
+  {
+    "id": "india-tee",
+    "name": "India Celebration T-shirt",
+    "category": "Festive",
+    "collection": "Festive",
+    "age": "3–7 Years",
+    "sizes": "3, 4, 5, 6, 7",
+    "fabric": "Single Jersey",
+    "gsm": "180 GSM",
+    "badge": "Occasion",
+    "image": "images/products/india-tee.svg",
+    "description": "Tri-colour festive T-shirt for national occasion sales."
+  }
+];

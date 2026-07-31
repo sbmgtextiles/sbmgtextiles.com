@@ -1,0 +1,1 @@
+Store future icons, downloadable files or other website assets here.

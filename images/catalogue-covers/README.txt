@@ -1,0 +1,1 @@
+Upload catalogue cover images here. Recommended portrait ratio.

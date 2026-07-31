@@ -3,73 +3,144 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="SBMG Textiles — wholesale kidswear manufacturer in Tirupur. View products and download the latest catalogues.">
-  <meta name="theme-color" content="#10263b">
-  <title>SBMG Textiles | Wholesale Kidswear Manufacturer</title>
+  <title>SBMG Textiles | Wholesale Kidswear</title>
+  <meta name="description" content="SBMG Textiles - wholesale kidswear manufacturer from Tirupur. Browse products and download catalogues.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/site.css">
 </head>
 <body>
-  <div class="topbar"><div class="container topbar-inner"><span>Wholesale kidswear manufactured in Tirupur</span><a href="tel:+919842886717">+91 98428 86717</a></div></div>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span>Wholesale kidswear from Tirupur</span>
+      <a href="admin.html">Catalogue Manager</a>
+    </div>
+  </div>
+
   <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="brand" href="#home"><span class="brand-mark">SB</span><span><strong>SBMG</strong><small>TEXTILES</small></span></a>
+    <div class="container nav">
+      <a class="brand" href="#home">
+        <img src="images/logo/sbmg-logo.svg" alt="SBMG">
+        <span><strong>SBMG</strong><small>TEXTILES</small></span>
+      </a>
       <button class="menu-btn" aria-label="Open menu">☰</button>
-      <nav class="nav"><a href="#products">Products</a><a href="#catalogues">Catalogues</a><a href="#why">Why SBMG</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
-      <a class="nav-cta whatsapp-link" href="#">Wholesale Enquiry</a>
+      <nav class="menu">
+        <a href="#collections">Collections</a>
+        <a href="#products">Products</a>
+        <a href="#catalogues">Catalogues</a>
+        <a href="#about">About</a>
+        <a class="nav-cta" href="#contact">Wholesale Enquiry</a>
+      </nav>
     </div>
   </header>
 
-  <main id="home">
-    <section class="hero">
+  <main>
+    <section id="home" class="hero">
       <div class="container hero-grid">
-        <div class="hero-copy reveal">
-          <div class="heritage-pill">MADE IN TIRUPUR • BUILT FOR WHOLESALE</div>
-          <h1>Kidswear buyers can sell with confidence.</h1>
-          <p>Comfortable, commercial and market-ready T-shirts, shorts and co-ord sets for wholesalers, distributors and retailers across India.</p>
-          <div class="hero-actions"><a class="btn btn-gold" href="#catalogues">View Catalogues</a><a class="btn btn-light whatsapp-link" href="#">Enquire on WhatsApp</a></div>
-          <div class="trust-row"><div><strong>3–14 yrs</strong><span>Age-range capability</span></div><div><strong>Tirupur</strong><span>Knitwear manufacturing</span></div><div><strong>Pan India</strong><span>Wholesale support</span></div></div>
+        <div class="hero-copy">
+          <p class="eyebrow">MADE IN TIRUPUR · BUILT FOR WHOLESALE</p>
+          <h1>Kidswear designed to move fast in the market.</h1>
+          <p class="lead">Reliable manufacturing, commercial colours and reorder-friendly styles for distributors and retailers across India.</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#products">View Products</a>
+            <a class="btn secondary" href="#catalogues">Download Catalogues</a>
+          </div>
+          <div class="trust-grid">
+            <div><strong>3–14 yrs</strong><span>Age coverage</span></div>
+            <div><strong>Wholesale</strong><span>Market-focused</span></div>
+            <div><strong>Tirupur</strong><span>Manufacturing base</span></div>
+          </div>
         </div>
-        <div class="hero-showcase reveal">
-          <div class="showcase-bg"></div>
-          <div class="garment tee"><span>SBMG</span><b>KIDS</b></div>
-          <div class="garment shorts"><i></i></div>
-          <div class="quality-card"><b>Buyer-ready collections</b><span>Commercial colours • Practical fits</span></div>
+        <div class="hero-art">
+          <img class="banner-main" src="images/banners/hero-kidswear.svg" alt="SBMG kidswear collection">
+          <div class="float-card one"><b>New Collections</b><span>Season-ready styles</span></div>
+          <div class="float-card two"><b>Easy Enquiry</b><span>Direct on WhatsApp</span></div>
         </div>
       </div>
     </section>
-    <div class="marquee"><div>SOFT FABRICS <i>◆</i> CONSISTENT SIZING <i>◆</i> WHOLESALE SUPPORT <i>◆</i> MADE IN TIRUPUR <i>◆</i> REPEAT-FRIENDLY STYLES</div></div>
 
-    <section class="section" id="products">
+    <section id="collections" class="section soft">
       <div class="container">
-        <div class="section-head reveal"><div><span class="kicker">PRODUCT COLLECTION</span><h2>Current wholesale styles</h2></div><p>Explore product categories and contact us for colour, size, MOQ and price details.</p></div>
-        <div class="catalog-toolbar"><div class="filters" id="filters"></div><a class="text-link whatsapp-link" href="#">Request full range →</a></div>
-        <div class="product-grid" id="productGrid"></div>
+        <div class="section-head">
+          <div><p class="eyebrow">COLLECTIONS</p><h2>Built for every selling season</h2></div>
+          <p>Use these collection cards to guide buyers quickly to the right range.</p>
+        </div>
+        <div class="collection-grid">
+          <article><span>01</span><h3>Boys Co-ords</h3><p>T-shirt and shorts sets for everyday retail.</p></article>
+          <article><span>02</span><h3>Girls Sets</h3><p>Colourful, comfortable and easy-selling styles.</p></article>
+          <article><span>03</span><h3>Winter Wear</h3><p>Loop-knit and full-sleeve seasonal products.</p></article>
+          <article><span>04</span><h3>Festive Drops</h3><p>Occasion-led graphics and market colours.</p></article>
+        </div>
       </div>
     </section>
 
-    <section class="section catalogues-section" id="catalogues">
+    <section id="products" class="section">
       <div class="container">
-        <div class="section-head reveal"><div><span class="kicker">DOWNLOADABLE CATALOGUES</span><h2>Choose the latest collection</h2></div><p>Open or download the PDF catalogue and share selected styles with us on WhatsApp.</p></div>
-        <div class="catalogue-grid" id="catalogueGrid"></div>
-        <div class="easy-note"><strong>Easy to update:</strong> New PDF catalogues can be added using the included <a href="admin.html">Catalogue Manager</a>.</div>
+        <div class="section-head">
+          <div><p class="eyebrow">PRODUCTS</p><h2>Current wholesale range</h2></div>
+          <p>Products below are controlled from <b>data/products.js</b>.</p>
+        </div>
+        <div class="toolbar">
+          <div id="productFilters" class="filters"></div>
+          <input id="productSearch" class="search" type="search" placeholder="Search product, fabric or age">
+        </div>
+        <div id="productGrid" class="product-grid"></div>
       </div>
     </section>
 
-    <section class="section soft" id="why">
-      <div class="container"><div class="center-head reveal"><span class="kicker">BUILT FOR WHOLESALE</span><h2>A dependable supply partner</h2><p>We combine buyer-focused design with practical manufacturing and straightforward communication.</p></div>
-        <div class="benefit-grid"><article><b>01</b><h3>Tirupur manufacturing</h3><p>Produced in one of India’s leading knitwear manufacturing centres.</p></article><article><b>02</b><h3>Commercial styling</h3><p>Colour combinations and prints selected for practical retail selling.</p></article><article><b>03</b><h3>Quality focus</h3><p>Attention to fabric, fit, stitching, print placement and finishing.</p></article><article><b>04</b><h3>Quick enquiry</h3><p>Easy catalogue selection and order discussion through WhatsApp.</p></article></div>
+    <section id="catalogues" class="section dark">
+      <div class="container">
+        <div class="section-head light-head">
+          <div><p class="eyebrow gold">CATALOGUES</p><h2>Download our latest ranges</h2></div>
+          <p>Add, edit and remove catalogues using the included manager page.</p>
+        </div>
+        <div id="catalogueGrid" class="catalogue-grid"></div>
       </div>
     </section>
 
-    <section class="section story" id="about"><div class="container story-grid"><div class="story-panel reveal"><span>SBMG</span><strong>Made for movement.<br>Designed for childhood.</strong></div><div class="story-copy reveal"><span class="kicker gold">OUR STORY</span><h2>Comfort at the core of every collection.</h2><p>SBMG Textiles is a kidswear manufacturer based in Tirupur. We focus on comfortable fabrics, appealing colours and practical styles for India’s wholesale market.</p><p>Our aim is to create value-driven garments that retailers can present confidently and children enjoy wearing.</p></div></div></section>
+    <section id="about" class="section">
+      <div class="container about-grid">
+        <div class="about-art"><img src="images/banners/about-factory.svg" alt="SBMG manufacturing"></div>
+        <div>
+          <p class="eyebrow">ABOUT SBMG</p>
+          <h2>Commercial kidswear with manufacturing discipline.</h2>
+          <p>SBMG Textiles focuses on fit, fabric, colour combinations, printing and packing that work for wholesale buyers. Our website is designed to make product discovery and catalogue sharing simple.</p>
+          <div class="checks">
+            <span>✓ Market-oriented designs</span>
+            <span>✓ Wholesale enquiry support</span>
+            <span>✓ Seasonal catalogue updates</span>
+            <span>✓ Future-ready digital platform</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <section class="section contact" id="contact"><div class="container contact-card reveal"><div><span class="kicker gold">WHOLESALE ENQUIRIES</span><h2>Let’s build your next order.</h2><p>Contact us for the latest styles, size ranges, available colours and order details.</p><div class="hero-actions"><a class="btn btn-white whatsapp-link" href="#">Chat on WhatsApp</a><a class="btn btn-outline" href="mailto:sbmgtextiles@gmail.com">Email us</a></div></div><div class="contact-details"><small>PHONE</small><a href="tel:+919842886717">+91 98428 86717</a><small>EMAIL</small><a href="mailto:sbmgtextiles@gmail.com">sbmgtextiles@gmail.com</a><small>ADDRESS</small><p>1/81 D1, Rakkiyagoundan Pudur, Uthukadu, Neruperichal, Pooluvapatti, Tirupur – 641602</p></div></div></section>
+    <section id="contact" class="section contact">
+      <div class="container contact-card">
+        <div><p class="eyebrow gold">WHOLESALE ENQUIRY</p><h2>Let's discuss your next order.</h2><p>Replace the demo phone number in <b>data/settings.js</b> with your real WhatsApp number.</p></div>
+        <div class="contact-actions">
+          <a id="whatsappMain" class="btn white" href="#" target="_blank" rel="noopener">WhatsApp SBMG</a>
+          <a id="emailMain" class="btn outline" href="#">Send Email</a>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <footer><div class="container footer-grid"><div><a class="brand footer-brand" href="#home"><span class="brand-mark">SB</span><span><strong>SBMG</strong><small>TEXTILES</small></span></a><p>Comfortable kidswear for India’s wholesale market.</p></div><div><h4>Explore</h4><a href="#products">Products</a><a href="#catalogues">Catalogues</a><a href="#about">About</a></div><div><h4>Contact</h4><a href="tel:+919842886717">+91 98428 86717</a><a href="mailto:sbmgtextiles@gmail.com">sbmgtextiles@gmail.com</a></div></div><div class="container copyright">© <span id="year"></span> SBMG Textiles. All rights reserved.</div></footer>
-  <a class="floating-wa whatsapp-link" href="#" aria-label="WhatsApp">WA</a>
-  <script src="products.js"></script><script src="catalogues.js"></script><script src="script.js"></script>
-</body></html>
+  <footer>
+    <div class="container footer-grid">
+      <div class="brand footer-brand"><img src="images/logo/sbmg-logo.svg" alt=""><span><strong>SBMG</strong><small>TEXTILES</small></span></div>
+      <div><b>Quick links</b><a href="#products">Products</a><a href="#catalogues">Catalogues</a><a href="admin.html">Manager</a></div>
+      <div><b>Contact</b><p id="footerPhone"></p><p id="footerEmail"></p><p id="footerAddress"></p></div>
+    </div>
+    <div class="container copyright">© <span id="year"></span> SBMG Textiles. All rights reserved.</div>
+  </footer>
+
+  <a id="floatingWhatsapp" class="floating-whatsapp" href="#" target="_blank" aria-label="WhatsApp">WA</a>
+
+  <script src="data/settings.js"></script>
+  <script src="data/products.js"></script>
+  <script src="data/catalogues.js"></script>
+  <script src="js/site.js"></script>
+</body>
+</html>

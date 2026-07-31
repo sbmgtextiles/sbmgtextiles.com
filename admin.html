@@ -1,8 +1,64 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>SBMG Easy Catalogue Manager</title><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="admin.css"></head><body>
-<header><div><b>SBMG</b><span>Easy Website Manager</span></div><a href="index.html">View Website</a></header>
-<main><section class="intro"><h1>Catalogue Manager</h1><p>Add, edit or remove PDF catalogues. Then download the updated <code>catalogues.js</code> and upload that one file to GitHub.</p><div class="warning"><b>Important:</b> This page works without a server. Changes remain in this browser until you export the file. It does not directly update GitHub.</div></section>
-<div class="layout"><aside><button class="tab active" data-tab="catalogues">PDF Catalogues</button><button class="tab" data-tab="help">Upload Guide</button><button class="danger" id="resetBtn">Reset changes</button></aside>
-<section class="panel active" id="cataloguesPanel"><div class="panel-head"><div><h2>Your catalogues</h2><p>Use the exact PDF filename you will upload into the <code>catalogues</code> folder.</p></div><button class="primary" id="addBtn">+ Add Catalogue</button></div><div id="list"></div><div class="export"><button class="primary big" id="exportBtn">Download Updated catalogues.js</button><p>After downloading, replace the old <b>catalogues.js</b> in GitHub.</p></div></section>
-<section class="panel" id="helpPanel"><h2>Simple upload steps</h2><ol><li>Prepare your catalogue as a PDF, for example <code>summer-2027.pdf</code>.</li><li>Open this manager and click <b>+ Add Catalogue</b>.</li><li>Enter <code>catalogues/summer-2027.pdf</code> in PDF path.</li><li>Click <b>Download Updated catalogues.js</b>.</li><li>In GitHub, upload the PDF inside the <code>catalogues</code> folder.</li><li>Replace the main <code>catalogues.js</code> file with the downloaded one.</li><li>Wait 1–5 minutes and refresh the website.</li></ol><h3>Cover image (optional)</h3><p>Upload a cover image inside <code>images/catalogues</code>, then enter a path such as <code>images/catalogues/summer-2027.jpg</code>. Leave it blank to use the premium automatic cover.</p></section></div></main>
-<div class="modal" id="modal"><form id="form"><div class="modal-head"><h2 id="formTitle">Add Catalogue</h2><button type="button" id="closeBtn">×</button></div><input type="hidden" id="editIndex"><label>Catalogue title<input id="title" required placeholder="Summer Collection 2027"></label><div class="two"><label>Season<input id="season" placeholder="Summer"></label><label>Year<input id="year" placeholder="2027"></label></div><label>Description<textarea id="description" rows="3" placeholder="Short description shown on website"></textarea></label><label>PDF path<input id="pdf" required placeholder="catalogues/summer-2027.pdf"></label><label>Cover image path (optional)<input id="cover" placeholder="images/catalogues/summer-2027.jpg"></label><label>Badge<input id="badge" placeholder="Latest"></label><button class="primary big" type="submit">Save Catalogue</button></form></div>
-<script src="catalogues.js"></script><script src="admin.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>SBMG Easy Manager</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="admin-brand" href="index.html"><img src="images/logo/sbmg-logo.svg"><span>SBMG Manager</span></a>
+    <button class="tab active" data-tab="catalogues">Catalogues</button>
+    <button class="tab" data-tab="products">Products</button>
+    <button class="tab" data-tab="settings">Contact Settings</button>
+    <a class="back-link" href="index.html">← View Website</a>
+  </aside>
+
+  <main class="admin-main">
+    <header class="admin-header">
+      <div><p>STATIC WEBSITE MANAGER</p><h1>Easy catalogue and product editor</h1></div>
+      <div class="status">Works without coding</div>
+    </header>
+
+    <section id="catalogues" class="panel active">
+      <div class="panel-head"><div><h2>Catalogue Manager</h2><p>Add details, then export the updated file.</p></div><button id="addCatalogue" class="btn primary">+ Add Catalogue</button></div>
+      <div class="notice"><b>Important:</b> Upload the PDF and cover image to GitHub first. Then use the same file paths here.</div>
+      <div id="catalogueEditor" class="editor-list"></div>
+      <div class="export-bar"><button id="exportCatalogues" class="btn success">Download updated catalogues.js</button><span>Upload the downloaded file into GitHub → <b>data/catalogues.js</b></span></div>
+    </section>
+
+    <section id="products" class="panel">
+      <div class="panel-head"><div><h2>Product Manager</h2><p>Add or edit products and export the data file.</p></div><button id="addProduct" class="btn primary">+ Add Product</button></div>
+      <div class="notice"><b>Image path example:</b> images/products/space-set.svg</div>
+      <div id="productEditor" class="editor-list"></div>
+      <div class="export-bar"><button id="exportProducts" class="btn success">Download updated products.js</button><span>Upload the downloaded file into GitHub → <b>data/products.js</b></span></div>
+    </section>
+
+    <section id="settings" class="panel">
+      <div class="panel-head"><div><h2>Contact Settings</h2><p>Edit your contact details and export settings.js.</p></div></div>
+      <div id="settingsEditor" class="settings-grid"></div>
+      <div class="export-bar"><button id="exportSettings" class="btn success">Download updated settings.js</button><span>Upload it into GitHub → <b>data/settings.js</b></span></div>
+    </section>
+
+    <section class="guide">
+      <h2>Simple update process</h2>
+      <ol>
+        <li>Upload your PDF or image into the correct GitHub folder.</li>
+        <li>Open <b>admin.html</b>, enter the file path and other details.</li>
+        <li>Click the green download button.</li>
+        <li>Upload the downloaded JavaScript file into the <b>data</b> folder and replace the old one.</li>
+        <li>Wait 1–5 minutes and refresh your website.</li>
+      </ol>
+    </section>
+  </main>
+
+  <script src="data/settings.js"></script>
+  <script src="data/products.js"></script>
+  <script src="data/catalogues.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

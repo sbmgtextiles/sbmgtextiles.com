@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1100" viewBox="0 0 900 1100">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#2b6f8f"/><stop offset="1" stop-color="#142b4a"/></linearGradient></defs>
+<rect width="900" height="1100" rx="48" fill="url(#g)"/>
+<circle cx="720" cy="180" r="150" fill="#ffffff" opacity=".14"/><circle cx="150" cy="900" r="190" fill="#ffffff" opacity=".10"/>
+<path d="M310 250h280l90 120-85 80v390H305V450l-85-80z" fill="#fff" opacity=".95"/>
+<rect x="355" y="355" width="190" height="220" rx="22" fill="#142b4a" opacity=".9"/>
+<text x="450" y="760" text-anchor="middle" font-family="Arial" font-size="42" font-weight="700" fill="#fff">SPACE SET</text>
+<text x="450" y="820" text-anchor="middle" font-family="Arial" font-size="24" fill="#fff" opacity=".85">Boys 3-7 Years</text>
+</svg>

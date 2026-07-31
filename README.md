@@ -1,40 +1,38 @@
-# SBMG Textiles Website — Easy Catalogue Edition
+SBMG WEBSITE - COMPLETE EASY MANAGER EDITION
 
-This website is made for GitHub Pages and includes an easy catalogue manager.
+IMPORTANT
+This is a static GitHub Pages website. It cannot permanently save changes directly from admin.html.
+The manager makes updating easy by downloading a replacement data file.
 
-## First-time upload to GitHub
+UPLOAD TO GITHUB
+1. Delete the old website files from the repository.
+2. Extract this ZIP on your computer.
+3. Open the extracted folder.
+4. Select ALL files and folders inside.
+5. Drag them into GitHub's Upload files page.
+6. Click Commit changes.
+7. Wait 1-5 minutes and refresh sbmgtextiles.com.
 
-1. Unzip this package on your computer.
-2. Open your GitHub repository.
-3. Delete the old website files.
-4. Click **Add file → Upload files**.
-5. Drag all files and folders from inside this package. Do not upload the outer ZIP itself.
-6. Commit the changes.
-7. Wait 1–5 minutes and open https://sbmgtextiles.com/
+HOW TO ADD A CATALOGUE
+1. Upload your PDF into the catalogues folder.
+2. Upload its cover photo into images/catalogue-covers.
+3. Open https://sbmgtextiles.com/admin.html
+4. Click + Add Catalogue.
+5. Enter the title, season, year, cover path and PDF path.
+6. Click Download updated catalogues.js.
+7. In GitHub, open data/catalogues.js and replace it with the downloaded file.
+8. Commit and wait for GitHub Pages to update.
 
-## Add a new PDF catalogue
+EXAMPLE PATHS
+PDF: catalogues/summer-2027.pdf
+Cover: images/catalogue-covers/summer-2027.jpg
+Product image: images/products/space-boys-set.jpg
 
-1. Open `https://sbmgtextiles.com/admin.html` after this website is live.
-2. Click **+ Add Catalogue**.
-3. Enter the title, season, year and description.
-4. In PDF path, enter: `catalogues/your-file-name.pdf`
-5. Click **Download Updated catalogues.js**.
-6. In GitHub, open the `catalogues` folder and upload your PDF.
-7. In the main repository folder, replace `catalogues.js` with the downloaded file.
-8. Commit and wait 1–5 minutes.
+HOW TO ADD A PRODUCT
+Use the Products tab inside admin.html, export products.js, and replace data/products.js.
 
-## Optional catalogue cover
+HOW TO CHANGE PHONE / EMAIL
+Use Contact Settings inside admin.html, export settings.js, and replace data/settings.js.
 
-Upload a JPG/PNG into `images/catalogues/` and enter the path in the manager, for example:
-
-`images/catalogues/summer-2027.jpg`
-
-If left blank, the website creates a premium navy-and-gold cover automatically.
-
-## Important limitation
-
-GitHub Pages is a static website. The manager cannot directly save to GitHub. It creates the updated `catalogues.js` file for you, so only one small file needs to be replaced.
-
-## Product updates
-
-Products still use `products.js`. A similar product manager can be added later.
+FOLDERS WILL UPLOAD
+Every folder contains a visible README.txt or real file, so GitHub will not ignore it.
