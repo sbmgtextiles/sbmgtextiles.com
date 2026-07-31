@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>SBMG Easy Manager</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="admin-brand" href="index.html"><img src="images/logo/sbmg-logo.svg"><span>SBMG Manager</span></a>
+    <button class="tab active" data-tab="products">Products</button>
+    <button class="tab" data-tab="settings">Contact Settings</button>
+    <a class="back-link" href="index.html">← View Website</a>
+  </aside>
+
+  <main class="admin-main">
+    <header class="admin-header">
+      <div><p>STATIC WEBSITE MANAGER</p><h1>Easy product and photo editor</h1></div>
+      <div class="status">Works without coding</div>
+    </header>
+
+
+    <section id="products" class="panel active">
+      <div class="panel-head"><div><h2>Product Manager</h2><p>Add products with up to 3 photos, edit details, then export the data file.</p></div><button id="addProduct" class="btn primary">+ Add Product</button></div>
+      <div class="notice"><b>Upload 2–3 photos into images/products first.</b> Then enter all three image paths below.</div>
+      <div id="productEditor" class="editor-list"></div>
+      <div class="export-bar"><button id="exportProducts" class="btn success">Download updated products.js</button><span>Upload the downloaded file into GitHub → <b>data/products.js</b></span></div>
+    </section>
+
+    <section id="settings" class="panel">
+      <div class="panel-head"><div><h2>Contact Settings</h2><p>Edit your contact details and export settings.js.</p></div></div>
+      <div id="settingsEditor" class="settings-grid"></div>
+      <div class="export-bar"><button id="exportSettings" class="btn success">Download updated settings.js</button><span>Upload it into GitHub → <b>data/settings.js</b></span></div>
+    </section>
+
+    <section class="guide">
+      <h2>Simple update process</h2>
+      <ol>
+        <li>Upload your PDF or image into the correct GitHub folder.</li>
+        <li>Open <b>admin.html</b>, enter the file path and other details.</li>
+        <li>Click the green download button.</li>
+        <li>Upload the downloaded JavaScript file into the <b>data</b> folder and replace the old one.</li>
+        <li>Wait 1–5 minutes and refresh your website.</li>
+      </ol>
+    </section>
+  </main>
+
+  <script src="data/settings.js"></script>
+  <script src="data/products.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>
