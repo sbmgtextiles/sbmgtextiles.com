@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>SBMG Easy Manager</title>
+  <title>SBMG Admin</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
@@ -11,46 +11,94 @@
 </head>
 <body>
   <aside class="sidebar">
-    <a class="admin-brand" href="index.html"><img src="images/logo/sbmg-logo.svg"><span>SBMG Manager</span></a>
-    <button class="tab active" data-tab="products">Products</button>
-    <button class="tab" data-tab="settings">Contact Settings</button>
+    <a class="admin-brand" href="index.html"><img src="images/logo/sbmg-logo.svg" alt=""><span>SBMG Admin</span></a>
+    <span class="tab active">Products</span>
     <a class="back-link" href="index.html">← View Website</a>
   </aside>
 
   <main class="admin-main">
     <header class="admin-header">
-      <div><p>STATIC WEBSITE MANAGER</p><h1>Easy product and photo editor</h1></div>
-      <div class="status">Works without coding</div>
+      <div><p>SBMG PRODUCT ADMIN</p><h1>Add products without touching GitHub</h1></div>
+      <div class="status">Cloud Product Manager</div>
     </header>
 
-
-    <section id="products" class="panel active">
-      <div class="panel-head"><div><h2>Product Manager</h2><p>Add products with up to 3 photos, edit details, then export the data file.</p></div><button id="addProduct" class="btn primary">+ Add Product</button></div>
-      <div class="notice"><b>Upload 2–3 photos into images/products first.</b> Then enter all three image paths below.</div>
-      <div id="productEditor" class="editor-list"></div>
-      <div class="export-bar"><button id="exportProducts" class="btn success">Download updated products.js</button><span>Upload the downloaded file into GitHub → <b>data/products.js</b></span></div>
+    <section id="setupRequired" class="setup-card hidden">
+      <h2>One-time setup required</h2>
+      <p>The new admin is installed, but it needs your Supabase project connected once. After that, you can upload 2–3 photos and publish directly from this page.</p>
+      <div class="setup-steps">
+        <div><b>1</b><span>Create a free Supabase project.</span></div>
+        <div><b>2</b><span>Run the included <code>supabase/setup.sql</code>.</span></div>
+        <div><b>3</b><span>Paste the project URL and anon key into <code>data/supabase-config.js</code>.</span></div>
+      </div>
     </section>
 
-    <section id="settings" class="panel">
-      <div class="panel-head"><div><h2>Contact Settings</h2><p>Edit your contact details and export settings.js.</p></div></div>
-      <div id="settingsEditor" class="settings-grid"></div>
-      <div class="export-bar"><button id="exportSettings" class="btn success">Download updated settings.js</button><span>Upload it into GitHub → <b>data/settings.js</b></span></div>
+    <section id="loginView" class="login-card hidden">
+      <div>
+        <p class="mini-label">ADMIN LOGIN</p>
+        <h2>Sign in to manage products</h2>
+        <p>Use the admin email/password created in Supabase Authentication.</p>
+      </div>
+      <form id="loginForm" class="login-form">
+        <label>Email<input id="adminEmail" type="email" autocomplete="username" required></label>
+        <label>Password<input id="adminPassword" type="password" autocomplete="current-password" required></label>
+        <button class="btn primary" type="submit">Sign In</button>
+        <p id="loginMessage" class="login-message"></p>
+      </form>
     </section>
 
-    <section class="guide">
-      <h2>Simple update process</h2>
-      <ol>
-        <li>Upload your PDF or image into the correct GitHub folder.</li>
-        <li>Open <b>admin.html</b>, enter the file path and other details.</li>
-        <li>Click the green download button.</li>
-        <li>Upload the downloaded JavaScript file into the <b>data</b> folder and replace the old one.</li>
-        <li>Wait 1–5 minutes and refresh your website.</li>
-      </ol>
+    <section id="cloudAdminView" class="hidden">
+      <div class="cloud-toolbar">
+        <div><p class="mini-label">LIVE WEBSITE DATA</p><h2>Product Manager</h2></div>
+        <button id="logoutAdmin" class="btn">Sign Out</button>
+      </div>
+
+      <section class="panel active add-product-panel">
+        <div class="panel-head">
+          <div><h2 id="formTitle">Add Product</h2><p>Upload up to 3 photos, enter details and click Publish.</p></div>
+        </div>
+
+        <form id="productForm">
+          <div class="form-grid">
+            <div class="field wide"><label>Product Name</label><input id="pName" required placeholder="e.g. Kung Fu T-shirt"></div>
+            <div class="field"><label>Category</label><input id="pCategory" placeholder="Boys"></div>
+
+            <div class="field"><label>Collection</label><input id="pCollection" placeholder="Summer"></div>
+            <div class="field"><label>Age</label><input id="pAge" placeholder="3–7 Years"></div>
+            <div class="field"><label>Sizes</label><input id="pSizes" placeholder="3, 4, 5, 6, 7"></div>
+
+            <div class="field"><label>Fabric</label><input id="pFabric" placeholder="Single Jersey"></div>
+            <div class="field"><label>GSM</label><input id="pGsm" placeholder="190 GSM"></div>
+            <div class="field"><label>Badge</label><input id="pBadge" placeholder="New"></div>
+
+            <div class="field photo-field"><label>Photo 1 (Main)</label><input id="pPhoto1" type="file" accept="image/*"></div>
+            <div class="field photo-field"><label>Photo 2</label><input id="pPhoto2" type="file" accept="image/*"></div>
+            <div class="field photo-field"><label>Photo 3</label><input id="pPhoto3" type="file" accept="image/*"></div>
+
+            <div id="existingImages" class="existing-images full"></div>
+
+            <div class="field full"><label>Short Description</label><textarea id="pDescription" placeholder="Short buyer-friendly description"></textarea></div>
+            <div class="field full"><label>Full Product Details</label><textarea id="pDetails" placeholder="Fit, fabric, print, finish, etc."></textarea></div>
+
+            <div class="field"><label>Sort Order</label><input id="pSort" type="number" value="0"></div>
+            <label class="toggle-field"><input id="pActive" type="checkbox" checked><span>Show this product on website</span></label>
+          </div>
+
+          <div class="publish-row">
+            <button id="saveProduct" class="btn success" type="submit">Publish Product</button>
+            <button id="cancelEdit" class="btn hidden" type="button">Cancel Edit</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="panel active product-list-panel">
+        <div class="panel-head"><div><h2>Published Products</h2><p>Edit, hide or delete products here.</p></div></div>
+        <div id="cloudProductList" class="cloud-product-list"></div>
+      </section>
     </section>
   </main>
 
-  <script src="data/settings.js"></script>
-  <script src="data/products.js"></script>
-  <script src="js/admin.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="data/supabase-config.js"></script>
+  <script src="js/admin-cloud.js"></script>
 </body>
 </html>
