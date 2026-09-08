@@ -1,4 +1,4 @@
-(() => {
+(async () => {\nawait (window.SBMG_PRODUCTS_READY || Promise.resolve(window.SBMG_PRODUCTS || []));
 const settings=window.SBMG_SETTINGS||{},products=window.SBMG_PRODUCTS||[],$=s=>document.querySelector(s);
 const menuBtn=$('.menu-btn'),menu=$('.menu');if(menuBtn)menuBtn.onclick=()=>menu.classList.toggle('open');
 const baseWa=`https://wa.me/${settings.whatsapp}?text=${encodeURIComponent(settings.whatsappMessage||'Hello SBMG Textiles')}`;
