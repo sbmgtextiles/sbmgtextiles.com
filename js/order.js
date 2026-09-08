@@ -1,4 +1,4 @@
-(() => {
+(async () => {\nawait (window.SBMG_PRODUCTS_READY || Promise.resolve(window.SBMG_PRODUCTS || []));
   const settings = window.SBMG_SETTINGS || {};
   const products = window.SBMG_PRODUCTS || [];
   const $ = (s, root=document) => root.querySelector(s);
